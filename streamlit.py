@@ -7,9 +7,9 @@ API_URL = "https://usecase-7.onrender.com/predict"  # Update with your FastAPI U
 # Set the title for the Streamlit app
 st.title("DBSCAN Model Prediction Interface")
 
-# Input fields for user to enter data
-age = st.number_input("Enter Age", min_value=0, max_value=100, value=25)
-current_value = st.number_input("Enter Current Value", min_value=0, max_value=100000, value=5000)
+# Input fields for user to enter data using sliders
+age = st.slider("Select Age", min_value=0, max_value=100, value=25)
+current_value = st.slider("Select Current Value", min_value=0, max_value=1_000_000_000_000, value=5_000)
 
 # Button to trigger the prediction
 if st.button("Predict Cluster"):
