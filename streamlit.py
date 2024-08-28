@@ -24,15 +24,15 @@ if st.button("Predict Cluster"):
         response = requests.post(API_URL, json=input_data)
         
         # Print the response details for debugging
-        st.write(f"Response Status Code: {response.status_code}")
-        st.write(f"Response Content: {response.text}")
+        #st.write(f"Response Status Code: {response.status_code}")
+        #st.write(f"Response Content: {response.text}")
         
         # Check the response status
         if response.status_code == 200:
             # Extract and display the predicted cluster
             result = response.json()
             cluster = result['cluster']
-            st.success(f"The predicted cluster is: {cluster}")
+            #st.success(f"The predicted cluster is: {cluster}")
         else:
             st.error("Error in prediction. Please check your input and try again.")
     except Exception as e:
