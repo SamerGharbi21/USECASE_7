@@ -29,13 +29,8 @@ async def read_item(item_id: int):
 
 @app.post("/predict")
 async def predict(input_features: InputFeatures):
-    try:
-        # Preprocess input data
         data = preprocessing(input_features)
-        # Predict the cluster using the DBSCAN model
-        y_pred = model.fit_predict(data)  # Use fit_predict for DBSCAN
+        y_pred = model.fit_predict(data)  
         return {"cluster": int(y_pred[0])}
-    except Exception as e:
-        # Return error message if any exception occurs
-        raise HTTPException(status_code=400, detail=str(e))
+
 
