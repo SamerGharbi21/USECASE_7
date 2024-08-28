@@ -2,8 +2,8 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import joblib
 
-model = joblib.load('DBSCAN.joblib')
-scaler = joblib.load('DBscaler.joblib')
+model = joblib.load('kmean.joblib')
+scaler = joblib.load('kscaler.joblib')
 
 app = FastAPI()
 
