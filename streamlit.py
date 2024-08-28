@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Set the URL of your FastAPI application
-API_URL = "https://usecase-7.onrender.com/predict"  # Update this with your FastAPI URL
+API_URL = "https://usecase-7.onrender.com/predict"  # Update with your FastAPI URL
 
 # Set the title for the Streamlit app
 st.title("DBSCAN Model Prediction Interface")
@@ -22,6 +22,10 @@ if st.button("Predict Cluster"):
     try:
         # Make a POST request to the FastAPI endpoint
         response = requests.post(API_URL, json=input_data)
+        
+        # Print the response details for debugging
+        st.write(f"Response Status Code: {response.status_code}")
+        st.write(f"Response Content: {response.text}")
         
         # Check the response status
         if response.status_code == 200:
