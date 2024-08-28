@@ -32,7 +32,7 @@ if st.button("Predict Cluster"):
             # Extract and display the predicted cluster
             result = response.json()
             cluster = result['cluster']
-            #st.success(f"The predicted cluster is: {cluster}")
+            st.success(f"The predicted cluster is: {cluster}")
         else:
             st.error("Error in prediction. Please check your input and try again.")
     except Exception as e:
