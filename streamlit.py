@@ -9,7 +9,7 @@ st.title("DBSCAN Model Prediction Interface")
 
 # Input fields for user to enter data using sliders
 age = st.slider("Select Age", min_value=0, max_value=100, value=25)
-current_value = st.slider("Select Current Value", min_value=0, max_value=1_000_000_000_000, value=5_000)
+current_value = st.slider("Select Current Value", min_value=0, max_value=1_000_000_000_0, value=5_000)
 
 # Button to trigger the prediction
 if st.button("Predict Cluster"):
