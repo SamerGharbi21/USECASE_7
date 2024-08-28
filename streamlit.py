@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Set the URL of your FastAPI application
-API_URL = "http://127.0.0.1:8000/predict"  # Ensure this matches your FastAPI app URL
+API_URL = "https://usecase-7.onrender.com/predict"  # Update this with your FastAPI URL
 
 # Set the title for the Streamlit app
 st.title("DBSCAN Model Prediction Interface")
