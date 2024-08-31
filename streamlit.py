@@ -37,3 +37,6 @@ if st.button("Predict Cluster"):
             st.error("Error in prediction. Please check your input and try again.")
     except Exception as e:
         st.error(f"An error occurred: {e}")
+
+image =  "image.png"
+st.image(image, caption="")
