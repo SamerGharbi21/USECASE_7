@@ -7,6 +7,8 @@ API_URL = "https://usecase-7.onrender.com/predict"  # Update with your FastAPI U
 # Set the title for the Streamlit app
 st.title("DBSCAN Model")
 
+st.markdown("<hr style='border: 1px solid gray;'>", unsafe_allow_html=True)
+
 # Input fields for user to enter data using sliders
 age = st.slider("Select Age", min_value=0, max_value=100, value=25)
 current_value = st.slider("Select Current Value", min_value=0, max_value=1_000_000_00, value=5_000)
